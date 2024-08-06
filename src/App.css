@@ -1,0 +1,452 @@
+/*@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}*/
+
+body { 
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.abb-logo {
+  height: 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+
+.navbar-menu button {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.login {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+h1 {
+  text-align: left;
+  font-size: 24px;
+}
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.left-section {
+  flex: 0.8;
+  min-width: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.right-section {
+  flex: 0.4;
+  min-width: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-section {
+  max-width: 500px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+select, input[type="text"], input[type="radio"] {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.details-button, .add-to-cart, .download-price-summary { 
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+.details-button:hover, .add-to-cart:hover, .download-price-summary:hover {
+  background-color: #555;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.price-table th, .price-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  
+  
+}
+
+.price-table th {
+  background-color: #f2f2f2;
+  
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.summary div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.total-price, .lead-time {
+  display: flex;
+  justify-content: space-between;
+  width: 48%;
+}
+
+.total-price span, .lead-time span {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+
+  .left-section, .right-section {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .summary {
+    flex-direction: column;
+  }
+
+  .total-price, .lead-time {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.configuration-content section {
+  margin-bottom: 20px;
+}
+
+.configuration-content label {
+  display: inline-block;
+  width: 150px; /*30% */
+  font-weight: bold;
+ /* margin-bottom: 5px; */
+}
+
+.configuration-content input[type="text"], .configuration-content select,.configuration-content input[type="radio"] {
+  display: inline-block;
+  /*margin-top: 5px;*/
+  padding: 5px;
+  width: calc(100%-160px); /*65%*/
+}
+
+
+.configuration-content h3 {
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.left-section .configuration-content, .left-section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.left-section > div > section {
+  width: 100%;
+}
+ 
+.configuration-content div {
+  display : flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.configuration-content div label {
+  margin-bottom:0;
+}
+
+.robot-type div{
+  display : flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.robot-type div label {
+  margin-bottom:0;
+}
+
+.riser-base-plate div{
+  display : flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.riser-base-plate div label {
+  margin-bottom:0;
+}
+
+
+.fixation-type,
+.riser-base-plate,
+.robot-type {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.fixation-type h3,
+.riser-base-plate h3,
+.robot-type h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.fixation-type select,
+.riser-base-plate select,
+.robot-type select,
+.fixation-type input[type="text"],
+.riser-base-plate input[type="text"],
+.riser-base-plate input[type="number"],
+.robot-type input[type="text"] {
+  padding: 4px;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: calc(65% - 10px); 
+  margin-bottom: 6px;
+  margin-left : auto;
+}
+
+.fixation-type label,
+.riser-base-plate label,
+.robot-type label {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.fixation-type div,
+.riser-base-plate div,
+.robot-type div {
+  margin-bottom: 6px;
+}
+
+.fixation-type .fixation-image,
+.riser-base-plate .base-plate-image,
+.robot-type .robot-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 8px;
+}
+
+.fixation-type select,
+.riser-base-plate select,
+.robot-type select {
+  padding: 4px;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: calc(100% - 10px); 
+  margin-bottom: 6px;
+}
+
+
+
+
+.fixation-type {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.fixation-type h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.fixation-type .pair {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.fixation-type label {
+  font-weight: bold;
+  width: 40%; 
+  margin-right: 10px; 
+}
+
+.fixation-type input[type="text"] {
+  padding: 4px;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 60%; 
+}
+
+.fixation-type .fixation-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 8px;
+}
+
+.robot-fasteners-details,
+.metal-fixation,
+.levelling-screws,
+.metal-type {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.robot-fasteners-details h3,
+.metal-fixation h3,
+.levelling-screws h3,
+.metal-type h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.robot-fasteners-details .pair,
+.metal-fixation .pair,
+.levelling-screws .pair {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.metal-type label {
+  margin-right: 10px; /* Space between label and radio buttons */
+}
+
+.pair label {
+  font-weight: bold;
+  width: 35%; /* Adjust label width */
+  margin-right: 8px; /* Space between label and input */
+}
+
+.pair input[type="text"],
+.pair input[type="radio"] {
+  padding: 4px;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 65%; /* Adjust input width */
+}
+
+@media (max-width: 768px) {
+  .pair label {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 4px; /* Adjust spacing between pairs */
+  }
+
+  .pair input[type="text"],
+  .pair input[type="radio"] {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+
+
+
+
+
+
+.collapsible {
+  margin-top: 10px;
+}
+
+.collapsible-btn {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  outline: none;
+}
+
+.collapsible-btn:hover {
+  background-color: #ddd;
+}
+
+.content {
+  display: none;
+}
+
+.content.show {
+  display: block;
+}
+
+.robot-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
